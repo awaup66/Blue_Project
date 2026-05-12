@@ -16,7 +16,7 @@ func Connect() {
 	godotenv.Load()
 
 	dsn := fmt.Sprintf(
-		"host=%s user=%s password=%s dbname=%s port=5432",
+		"host=%s user=%s password=%s dbname=%s port=5432 sslmode=require",
 		os.Getenv("DB_HOST"),
 		os.Getenv("DB_USER"),
 		os.Getenv("DB_PASSWORD"),
