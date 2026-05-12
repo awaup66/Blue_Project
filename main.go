@@ -7,8 +7,6 @@ import (
 	"myapp/middleware"
 	"net/http"
 
-	"log"
-
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -191,9 +189,7 @@ func main() {
 	// 	fmt.Println("คุณ :", name1, ",ID : ", result3)
 	// }
 
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("โหลด .env ไม่ได้")
-	}
+	godotenv.Load()
 
 	database.Connect()
 
